@@ -32,9 +32,21 @@ png(filename = "plot3.png",
     height = 480)
 
 plot(data$DateTime,
-     data$Global_active_power,
+     data$Sub_metering_1,
      type = "s",
-     ylab = "Global Active Power (kilowatts)",
+     ylab = "Energy sub metering",
      xlab = "")
+
+lines(data$DateTime,
+      data$Sub_metering_2, col = "red")
+
+lines(data$DateTime,
+      data$Sub_metering_3, col = "blue")
+
+# Add legend
+legend("topright", # position
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), # texts
+       lty = c(1,1,1), # set lines
+       col = c("black", "red", "blue")) # set lines colors
 
 dev.off()
