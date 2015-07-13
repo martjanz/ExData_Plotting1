@@ -27,7 +27,7 @@ data <- data[as.Date(data$DateTime) >= as.Date('2007-02-01')
              & as.Date(data$DateTime) < as.Date('2007-02-03'),]
 
 
-png(filename = "plot2.png",
+png(filename = "plot3.png",
     width = 480,
     height = 480)
 
